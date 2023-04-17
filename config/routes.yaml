@@ -1,5 +1,19 @@
 app-homepage:
     path: /
-    controller:  'App\Controller\QuestionController::homepage'
+    controller: 'App\Controller\QuestionController::homepage'
+app-show-page:
+    path: /questions/show-page
+    controller: 'App\Controller\QuestionController::show'
+app-questions:
+    path: /question/{slug}
+    controller: 'App\Controller\QuestionController::question'
+app-blog:
+        path: /blog/{slug}
+        controller: 'App\Controller\QuestionController::blog'
+
+
+
+
+
 
 

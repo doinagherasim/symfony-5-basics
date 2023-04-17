@@ -19,4 +19,19 @@ public function homepage() {
     public function show() {
         return new Response('Show new page');
     }
+    /**
+     * @Route("/question/{$slug}")
+     */
+    public function question($slug) {
+        return new Response(sprintf('question page "%s"!', $slug));
+    }
+
+    /**
+     * @Route("/blog/{$slug}")
+     */
+    public function blog($slug) {
+        return new Response(sprintf('blog page "%s"!',
+            ucwords(str_replace('-', ' ', $slug))
+        ));
+    }
 }
